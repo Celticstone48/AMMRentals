@@ -10,10 +10,19 @@ body {
     color: #333333;
     margin: 0;
     padding: 0;
+
+/*Create the overall page grid using named areas */
+display: grid;
+grid-template-areas: 
+    "header"
+    "navigation"
+    "main"
+    "footer";
 }
 
 /* Header */
 #site-header {
+    grid-area: header;
     background-color: #6B7D6A;
     color: white;
     text-align: center;
@@ -30,6 +39,7 @@ body {
 
 /* Navigation */
 .navigation {
+    grid-area: navigation;
     background-color: #A8BCA1;
     text-align: center;
     padding: 15px;
@@ -64,6 +74,7 @@ body {
 
 /* Main Content Area */
 main {
+    grid-area: main;
     width: 80%;
     max-width: 1000px;
     margin: 30px auto;
@@ -159,6 +170,7 @@ em {
 
 /* Footer */
 #site-footer {
+    grid-area: footer;
     background-color: #6B7D6A;
     color: white;
     text-align: center;
@@ -196,6 +208,12 @@ em {
     #site-header h1 {
         font-size: 2em;
     }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
 
     h2 {
         font-size: 1.5em;
