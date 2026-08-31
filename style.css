@@ -11,13 +11,13 @@ body {
     margin: 0;
     padding: 0;
 
-/*Create the overall page grid using named areas */
-display: grid;
-grid-template-areas: 
-    "header"
-    "navigation"
-    "main"
-    "footer";
+    /*Create the overall page grid using named areas */
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "main"
+        "footer";
 }
 
 /* Header */
@@ -168,6 +168,31 @@ em {
     color: #223622;
 }
 
+/* Assessment 6 Rental Property List */ 
+/* Styles the unordered list created by JavaScript */ 
+#list {
+     margin-top: 25px; 
+} 
+
+#list ul { 
+    background-color: #E4EADF; 
+    border: 2px solid #6B7D6A; 
+    border-radius: 10px; 
+    padding: 20px 20px 20px 45px; 
+    margin: 0; 
+} 
+
+#list li { 
+    color: #2F3E2F; 
+    font-size: 18px; 
+    line-height: 1.8; 
+    margin-bottom: 10px; 
+    padding: 8px; 
+} 
+#list li:last-child { 
+    margin-bottom: 0; 
+}
+
 /* Footer */
 #site-footer {
     grid-area: footer;
@@ -208,12 +233,6 @@ em {
     #site-header h1 {
         font-size: 2em;
     }
-
-    h2 {
-        font-size: 1.5em;
-    }
-}
-
 
     h2 {
         font-size: 1.5em;
