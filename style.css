@@ -238,3 +238,144 @@ em {
         font-size: 1.5em;
     }
 }
+
+/* ==========================================
+   Contact Form Styling
+   ==========================================*/
+
+/*Main contact form*/
+#webForm {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #F2F5F0;
+    border: 2px solid #A8BCA1;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/*Fieldsets */
+#webForm fieldset { 
+    border: 1px solid #A8BCA1; 
+    border-radius: 8px; 
+    margin-bottom: 25px; 
+    padding: 20px; 
+}
+
+/* Fieldset legends */ 
+#webForm legend { 
+    background-color: #6B7D6A; 
+    color: white; 
+    padding: 8px 15px; 
+    border-radius: 5px; 
+    font-weight: 600; 
+}
+
+/* Form labels */ 
+#webForm label { 
+    display: block; 
+    margin-top: 15px; 
+    margin-bottom: 6px; 
+    color: #2F3E2F; 
+    font-weight: 600; 
+}
+
+/* Text entry controls */ 
+#webForm input[type="text"], 
+#webForm input[type="email"], 
+#webForm input[type="tel"], 
+#webForm select, 
+#webForm textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #A8BCA1; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-family: inherit; 
+    font-size: 16px; 
+    background-color: #FFFFFF; 
+}
+
+/* Textarea */ 
+#webForm textarea { 
+    resize: vertical; 
+}
+
+/* Radio button group */ 
+#webForm .radio-group label { 
+    display: block; 
+    margin: 10px 0; 
+    font-weight: normal; 
+}
+
+/* Checkbox group */ 
+#webForm .checkbox-group label { 
+    display: block; 
+    margin: 10px 0; 
+    font-weight: normal; 
+}
+
+/* Radio buttons and checkboxes */ 
+#webForm input[type="radio"], 
+#webForm input[type="checkbox"] { 
+    width: auto; 
+    margin-right: 8px; 
+}
+
+/* Form controls when selected */ 
+#webForm input:focus, 
+#webForm select:focus, 
+#webForm textarea:focus { 
+    outline: 2px solid #6B7D6A; 
+    border-color: #6B7D6A; 
+}
+
+/* Form buttons */ 
+.form-buttons { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+/* Submit and reset buttons */ 
+#webForm input[type="submit"], 
+#webForm input[type="reset"] { 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #6B7D6A; 
+    color: white; 
+    font-size: 16px; 
+    font-weight: 600; 
+    cursor: pointer; 
+}
+
+/* Button hover effect */ 
+#webForm input[type="submit"]:hover, 
+#webForm input[type="reset"]:hover { 
+    background-color: #A8BCA1; 
+    color: #1F3B2D; 
+}
+
+/* Responsive form styling */ 
+@media (max-width: 768px) { 
+    #webForm { 
+        width: 100%; 
+        padding: 15px; 
+    }
+
+    #webForm fieldset { 
+        padding: 15px; 
+    }  
+
+    .form-buttons { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    #webForm input[type="submit"], 
+    #webForm input[type="reset"] { 
+        width: 100%; 
+    } 
+}
