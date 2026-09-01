@@ -35,8 +35,9 @@
     <p>
         We would love to hear from you.  If you have questions about a listed 
         rental property, or would like to schedule a tour, please contact us 
-        using the information below.  We are happy to assist you in finding your next home. 
-        </p>
+        using the information below or complete the form below.  We are happy 
+        to assist you in finding your next home. 
+    </p>
 
     <h2>Contact Information</h2>
 
@@ -46,6 +47,129 @@
         <strong>Address:</strong> 342 High St., Columbus, Oh 43215<br>
         <strong>Office Hours:</strong> 9:00 AM - 5:00 PM<br>
     </p>
+
+    <h2>Contact AMM Rentals Form</h2> 
+          
+    <!-- Contact Form --> 
+    <form id="webForm" action="#">
+
+         <fieldset> 
+            <legend>Contact Information</legend> 
+            
+            <!-- Text input --> 
+            <label for="firstName">First Name:</label> 
+            <input type="text" id="firstName" name="firstName"> 
+
+            <!-- Text input --> 
+            <label for="lastName">Last Name:</label> 
+            <input type="text" id="lastName" name="lastName"> 
+            
+            <!-- Email input --> <label for="email">Email Address:</label> 
+            <input type="email" id="email" name="email"> 
+            
+            <!-- Telephone input --> 
+            <label for="phone">Phone Number:</label> 
+            <input type="tel" id="phone" name="phone"> 
+        </fieldset> 
+        
+        <fieldset> 
+            <legend>Rental Preferences</legend> 
+            
+            <!-- Datalist --> 
+            <label for="location">Preferred Rental Location:</label> 
+            <input type="text" id="location" name="location" list="locations"> 
+            
+            <datalist id="locations"> 
+                <option value="Downtown"> 
+                <option value="Suburban Area"> 
+                <option value="Near Schools"> 
+                <option value="Near Shopping"> 
+                <option value="Quiet Neighborhood">
+            </datalist>
+
+            <!-- Drop-down menu --> 
+            <label for="propertyType">Preferred Property Type:</label> 
+            <select id="propertyType" name="propertyType"> 
+                <option value="">-- Select a Property Type --</option> 
+                <option value="Modern Apartment">Modern Apartment</option> 
+                <option value="Luxury Townhouse">Luxury Townhouse</option> 
+                <option value="Family Home">Family Home</option> 
+                <option value="Downtown Living">Downtown Living</option> 
+                <option value="Suburban Retreat">Suburban Retreat</option> 
+                <option value="Spacious Living">Spacious Living</option> 
+            </select> 
+        </fieldset> 
+        
+        <fieldset> 
+            <legend>How Many Bedrooms?</legend> 
+
+            <!-- Radio buttons --> 
+            <div class="radio-group"> 
+                
+                <label> 
+                    <input type="radio" id="bedroom1" name="bedrooms" value="1"> 1 Bedroom 
+                </label> 
+
+                <label> 
+                    <input type="radio" id="bedroom2" name="bedrooms" value="2"> 2 Bedrooms 
+                </label> 
+                
+                <label> 
+                    <input type="radio" id="bedroom3" name="bedrooms" value="3"> 3 Bedrooms 
+                </label> 
+                
+                <label> 
+                    <input type="radio" id="bedroom4" name="bedrooms" value="4"> 4+ Bedrooms 
+                </label> 
+            </div> 
+        
+        </fieldset> 
+        
+        <fieldset> 
+            <legend>What Are You Interested In?</legend> 
+            
+            <!-- Checkboxes --> 
+            <div class="checkbox-group"> 
+                <label> 
+                    <input type="checkbox" id="propertyTour" name="interests" value="property-tour"> 
+                    Schedule a Property Tour 
+                </label> 
+
+                <label> 
+                    <input type="checkbox" id="availability" name="interests" value="availability"> 
+                    Check Property Availability 
+                </label> 
+                
+                <label> 
+                    <input type="checkbox" id="rentalQuestions" name="interests" value="rental-questions"> 
+                    Ask Rental Questions 
+                </label> 
+                
+                <label> 
+                    <input type="checkbox" id="newsletter" name="interests" value="newsletter"> 
+                    Sign Up for the Newsletter 
+                </label> 
+            </div> 
+        
+        </fieldset> 
+        
+        <fieldset> 
+            <legend>Additional Information</legend> 
+            
+            <!-- Text area --> 
+             <label for="message">Message:</label> 
+             <textarea id="message" name="message" rows="6" placeholder="Enter your questions or additional information here."></textarea> 
+            
+        </fieldset> 
+        
+        <!-- Form buttons --> 
+        <div class="form-buttons"> 
+            <input type="reset" id="resetButton" name="resetButton" value="Reset Form"> 
+            
+            <input type="submit" id="submitButton" name="submitButton" value="Submit"> 
+        </div> 
+    
+    </form>
 
     <h2>Ways We Can Help</h2>
 
@@ -71,3 +195,5 @@
 
 </body>
 </html>
+
+
