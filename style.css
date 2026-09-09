@@ -373,9 +373,48 @@ em {
         flex-direction: column; 
         gap: 10px; 
     }
-
-    #webForm input[type="submit"], 
+    
+#webForm input[type="submit"], 
     #webForm input[type="reset"] { 
         width: 100%; 
     } 
+}
+
+/* ==========================================
+   Form Validation Messages
+   ========================================== */
+ /* Validation error message */
+.error-message {
+    color: #B22222;
+    background-color: #FDECEC;
+    border: 1px solid #B22222;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Successful form submission message */
+.success-message {
+    color: #245B2A;
+    background-color: #EAF6EA;
+    border: 1px solid #4F8A55;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Highlight invalid form fields */
+#webForm input:invalid,
+#webForm select:invalid,
+#webForm textarea:invalid {
+    border: 2px solid #B22222;
+}
+
+/* Highlight valid form fields */
+#webForm input:valid,
+#webForm select:valid,
+#webForm textarea:valid {
+    border: 2px solid #4F8A55;
 }
