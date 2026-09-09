@@ -82,4 +82,4 @@ function displayValidationMessage(message, type) {
 
     console.log("Validation message displayed:", message);
 }
-```
+
