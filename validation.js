@@ -11,9 +11,6 @@ alert("validation.js is working!");
 // Allow JavaScript to handle the validation
 form.noValidate = true;
 
-// Allow JavaScript to handle the validation
-form.noValidate = true;
-
 // Listen for form submission
 form.addEventListener("submit", function(event) {
 
