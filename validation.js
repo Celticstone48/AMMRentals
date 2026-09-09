@@ -6,8 +6,6 @@
 // Get the contact form
 const form = document.getElementById("webForm");
 
-alert("validation.js is working!");
-
 // Allow JavaScript to handle the validation
 form.noValidate = true;
 
