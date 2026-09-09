@@ -58,18 +58,26 @@
             
             <!-- Text input --> 
             <label for="firstName">First Name:</label> 
-            <input type="text" id="firstName" name="firstName"> 
+            <input type="text" id="firstName" name="firstName"
+            type="text" id="firstName" name="firstName"
+            required minlength="2" maxlength="30"
+            pattern="[A-Za-z\s'-]+"> 
 
             <!-- Text input --> 
             <label for="lastName">Last Name:</label> 
-            <input type="text" id="lastName" name="lastName"> 
+            <input type="text" id="lastName" name="lastName"
+            required minlength="2" maxlength="30"
+            pattern="[A-Za-z\s'-]+"> 
             
             <!-- Email input --> <label for="email">Email Address:</label> 
-            <input type="email" id="email" name="email"> 
+            <input type="email" id="email" name="email"
+            required maxlength="100"> 
             
             <!-- Telephone input --> 
             <label for="phone">Phone Number:</label> 
-            <input type="tel" id="phone" name="phone"> 
+            <input type="tel" id="phone" name="phone"
+            required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="813-647-8968"> 
         </fieldset> 
         
         <fieldset> 
@@ -77,7 +85,8 @@
             
             <!-- Datalist --> 
             <label for="location">Preferred Rental Location:</label> 
-            <input type="text" id="location" name="location" list="locations"> 
+            <input type="text" id="location" name="location" list="locations"
+            required minlength="3" maxlength="50"> 
             
             <datalist id="locations"> 
                 <option value="Downtown"> 
@@ -89,7 +98,7 @@
 
             <!-- Drop-down menu --> 
             <label for="propertyType">Preferred Property Type:</label> 
-            <select id="propertyType" name="propertyType"> 
+            <select id="propertyType" name="propertyType" required> 
                 <option value="">-- Select a Property Type --</option> 
                 <option value="Modern Apartment">Modern Apartment</option> 
                 <option value="Luxury Townhouse">Luxury Townhouse</option> 
@@ -107,7 +116,7 @@
             <div class="radio-group"> 
                 
                 <label> 
-                    <input type="radio" id="bedroom1" name="bedrooms" value="1"> 1 Bedroom 
+                    <input type="radio" id="bedroom1" name="bedrooms" value="1" required> 1 Bedroom 
                 </label> 
 
                 <label> 
@@ -158,7 +167,9 @@
             
             <!-- Text area --> 
              <label for="message">Message:</label> 
-             <textarea id="message" name="message" rows="6" placeholder="Enter your questions or additional information here."></textarea> 
+             <textarea id="message" name="message" rows="6" 
+             required minlength="10" maxlength="500"
+             placeholder="Enter your questions or additional information here."></textarea> 
             
         </fieldset> 
         
@@ -192,6 +203,10 @@
 <footer id="site-footer">
     <p>Copyright &copy; 2026 AMM Rentals. All Rights Reserved.</p>
 </footer>
+
+<!--Javascript files for form processing and validation -->
+<script src="form.js"></script>
+<script src="validation.js"></script>
 
 </body>
 </html>
