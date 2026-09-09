@@ -6,65 +6,43 @@
 // Get the contact form
 const form = document.getElementById("webForm");
 
+// Allow JavaScript to handle the validation
+form.noValidate = true;
+
 // Listen for form submission
 form.addEventListener("submit", function(event) {
 
     console.log("Form submission detected.");
+
+    // Stop the normal form submission
+    event.preventDefault();
 
     // Check the HTML5 validation rules
     if (!form.checkValidity()) {
 
         console.log("Form contains invalid information.");
 
-        // Prevent the form from submitting
-        event.preventDefault();
-
-        // Get all input elements
-        const controls = form.getElementsByTagName("input");
-
-        // Check each input
-        for (let i = 0; i < controls.length; i++) {
-
-            if (!controls[i].checkValidity()) {
-
-                console.log("Invalid field:", controls[i].name);
-
-                // Add a custom validation message
-                controls[i].setCustomValidity(
-                    "Please enter valid information in this field."
-                );
-
-            } else {
-
-                // Remove custom message from valid fields
-                controls[i].setCustomValidity("");
-            }
-        }
+        // Ask the browser to identify invalid fields
+        form.reportValidity();
 
         displayValidationMessage(
             "Please correct the highlighted fields before submitting the form.",
             "error"
         );
 
-    } else {
-
-        console.log("All form fields are valid.");
-
-        // Remove custom messages
-        const controls = form.getElementsByTagName("input");
-
-        for (let i = 0; i < controls.length; i++) {
-            controls[i].setCustomValidity("");
-        }
-
-        displayValidationMessage(
-            "Your form has been successfully validated!",
-            "success"
-        );
-
-        // Allow form.js to process the submitted information
-        displayFormData();
+        return;
     }
+
+    // If we get here, every required field is valid
+    console.log("All form fields are valid.");
+
+    displayValidationMessage(
+        "Your form has been successfully validated!",
+        "success"
+    );
+
+    // Process and display the submitted information
+    displayFormData();
 });
 
 
@@ -99,4 +77,4 @@ function displayValidationMessage(message, type) {
 
     console.log("Validation message displayed:", message);
 }
-
+```
